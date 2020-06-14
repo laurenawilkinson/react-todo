@@ -1,6 +1,7 @@
 module.exports = {
-  // ...
   variants: {
-    textDecoration: ['responsive', 'hover', 'focus', 'group-hover'],
-  },
+    width: ['responsive', 'group-hover'],
+    visibility: ['responsive', 'hover', 'focus', 'group-hover'],
+    opacity: ['responsive', 'hover', 'focus', 'group-hover']
+  }
 }

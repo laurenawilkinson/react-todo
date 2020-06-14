@@ -7708,6 +7708,26 @@ video {
   opacity: 1;
 }
 
+.group:hover .group-hover\:opacity-0 {
+  opacity: 0;
+}
+
+.group:hover .group-hover\:opacity-25 {
+  opacity: 0.25;
+}
+
+.group:hover .group-hover\:opacity-50 {
+  opacity: 0.5;
+}
+
+.group:hover .group-hover\:opacity-75 {
+  opacity: 0.75;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
 .outline-none {
   outline: 0;
 }
@@ -11576,18 +11596,6 @@ video {
   text-decoration: none;
 }
 
-.group:hover .group-hover\:underline {
-  text-decoration: underline;
-}
-
-.group:hover .group-hover\:line-through {
-  text-decoration: line-through;
-}
-
-.group:hover .group-hover\:no-underline {
-  text-decoration: none;
-}
-
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11671,6 +11679,30 @@ video {
 }
 
 .invisible {
+  visibility: hidden;
+}
+
+.hover\:visible:hover {
+  visibility: visible;
+}
+
+.hover\:invisible:hover {
+  visibility: hidden;
+}
+
+.focus\:visible:focus {
+  visibility: visible;
+}
+
+.focus\:invisible:focus {
+  visibility: hidden;
+}
+
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
+
+.group:hover .group-hover\:invisible {
   visibility: hidden;
 }
 
@@ -11902,6 +11934,198 @@ video {
 }
 
 .w-screen {
+  width: 100vw;
+}
+
+.group:hover .group-hover\:w-0 {
+  width: 0;
+}
+
+.group:hover .group-hover\:w-1 {
+  width: 0.25rem;
+}
+
+.group:hover .group-hover\:w-2 {
+  width: 0.5rem;
+}
+
+.group:hover .group-hover\:w-3 {
+  width: 0.75rem;
+}
+
+.group:hover .group-hover\:w-4 {
+  width: 1rem;
+}
+
+.group:hover .group-hover\:w-5 {
+  width: 1.25rem;
+}
+
+.group:hover .group-hover\:w-6 {
+  width: 1.5rem;
+}
+
+.group:hover .group-hover\:w-8 {
+  width: 2rem;
+}
+
+.group:hover .group-hover\:w-10 {
+  width: 2.5rem;
+}
+
+.group:hover .group-hover\:w-12 {
+  width: 3rem;
+}
+
+.group:hover .group-hover\:w-16 {
+  width: 4rem;
+}
+
+.group:hover .group-hover\:w-20 {
+  width: 5rem;
+}
+
+.group:hover .group-hover\:w-24 {
+  width: 6rem;
+}
+
+.group:hover .group-hover\:w-32 {
+  width: 8rem;
+}
+
+.group:hover .group-hover\:w-40 {
+  width: 10rem;
+}
+
+.group:hover .group-hover\:w-48 {
+  width: 12rem;
+}
+
+.group:hover .group-hover\:w-56 {
+  width: 14rem;
+}
+
+.group:hover .group-hover\:w-64 {
+  width: 16rem;
+}
+
+.group:hover .group-hover\:w-auto {
+  width: auto;
+}
+
+.group:hover .group-hover\:w-px {
+  width: 1px;
+}
+
+.group:hover .group-hover\:w-1\/2 {
+  width: 50%;
+}
+
+.group:hover .group-hover\:w-1\/3 {
+  width: 33.333333%;
+}
+
+.group:hover .group-hover\:w-2\/3 {
+  width: 66.666667%;
+}
+
+.group:hover .group-hover\:w-1\/4 {
+  width: 25%;
+}
+
+.group:hover .group-hover\:w-2\/4 {
+  width: 50%;
+}
+
+.group:hover .group-hover\:w-3\/4 {
+  width: 75%;
+}
+
+.group:hover .group-hover\:w-1\/5 {
+  width: 20%;
+}
+
+.group:hover .group-hover\:w-2\/5 {
+  width: 40%;
+}
+
+.group:hover .group-hover\:w-3\/5 {
+  width: 60%;
+}
+
+.group:hover .group-hover\:w-4\/5 {
+  width: 80%;
+}
+
+.group:hover .group-hover\:w-1\/6 {
+  width: 16.666667%;
+}
+
+.group:hover .group-hover\:w-2\/6 {
+  width: 33.333333%;
+}
+
+.group:hover .group-hover\:w-3\/6 {
+  width: 50%;
+}
+
+.group:hover .group-hover\:w-4\/6 {
+  width: 66.666667%;
+}
+
+.group:hover .group-hover\:w-5\/6 {
+  width: 83.333333%;
+}
+
+.group:hover .group-hover\:w-1\/12 {
+  width: 8.333333%;
+}
+
+.group:hover .group-hover\:w-2\/12 {
+  width: 16.666667%;
+}
+
+.group:hover .group-hover\:w-3\/12 {
+  width: 25%;
+}
+
+.group:hover .group-hover\:w-4\/12 {
+  width: 33.333333%;
+}
+
+.group:hover .group-hover\:w-5\/12 {
+  width: 41.666667%;
+}
+
+.group:hover .group-hover\:w-6\/12 {
+  width: 50%;
+}
+
+.group:hover .group-hover\:w-7\/12 {
+  width: 58.333333%;
+}
+
+.group:hover .group-hover\:w-8\/12 {
+  width: 66.666667%;
+}
+
+.group:hover .group-hover\:w-9\/12 {
+  width: 75%;
+}
+
+.group:hover .group-hover\:w-10\/12 {
+  width: 83.333333%;
+}
+
+.group:hover .group-hover\:w-11\/12 {
+  width: 91.666667%;
+}
+
+.group:hover .group-hover\:w-full {
+  width: 100%;
+}
+
+.group:hover .group-hover\:w-screen {
   width: 100vw;
 }
 
@@ -21458,6 +21682,26 @@ video {
     opacity: 1;
   }
 
+  .group:hover .sm\:group-hover\:opacity-0 {
+    opacity: 0;
+  }
+
+  .group:hover .sm\:group-hover\:opacity-25 {
+    opacity: 0.25;
+  }
+
+  .group:hover .sm\:group-hover\:opacity-50 {
+    opacity: 0.5;
+  }
+
+  .group:hover .sm\:group-hover\:opacity-75 {
+    opacity: 0.75;
+  }
+
+  .group:hover .sm\:group-hover\:opacity-100 {
+    opacity: 1;
+  }
+
   .sm\:outline-none {
     outline: 0;
   }
@@ -25326,18 +25570,6 @@ video {
     text-decoration: none;
   }
 
-  .group:hover .sm\:group-hover\:underline {
-    text-decoration: underline;
-  }
-
-  .group:hover .sm\:group-hover\:line-through {
-    text-decoration: line-through;
-  }
-
-  .group:hover .sm\:group-hover\:no-underline {
-    text-decoration: none;
-  }
-
   .sm\:antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -25421,6 +25653,30 @@ video {
   }
 
   .sm\:invisible {
+    visibility: hidden;
+  }
+
+  .sm\:hover\:visible:hover {
+    visibility: visible;
+  }
+
+  .sm\:hover\:invisible:hover {
+    visibility: hidden;
+  }
+
+  .sm\:focus\:visible:focus {
+    visibility: visible;
+  }
+
+  .sm\:focus\:invisible:focus {
+    visibility: hidden;
+  }
+
+  .group:hover .sm\:group-hover\:visible {
+    visibility: visible;
+  }
+
+  .group:hover .sm\:group-hover\:invisible {
     visibility: hidden;
   }
 
@@ -25652,6 +25908,198 @@ video {
   }
 
   .sm\:w-screen {
+    width: 100vw;
+  }
+
+  .group:hover .sm\:group-hover\:w-0 {
+    width: 0;
+  }
+
+  .group:hover .sm\:group-hover\:w-1 {
+    width: 0.25rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-2 {
+    width: 0.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-3 {
+    width: 0.75rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-4 {
+    width: 1rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-5 {
+    width: 1.25rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-6 {
+    width: 1.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-8 {
+    width: 2rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-10 {
+    width: 2.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-12 {
+    width: 3rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-16 {
+    width: 4rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-20 {
+    width: 5rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-24 {
+    width: 6rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-32 {
+    width: 8rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-40 {
+    width: 10rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-48 {
+    width: 12rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-56 {
+    width: 14rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-64 {
+    width: 16rem;
+  }
+
+  .group:hover .sm\:group-hover\:w-auto {
+    width: auto;
+  }
+
+  .group:hover .sm\:group-hover\:w-px {
+    width: 1px;
+  }
+
+  .group:hover .sm\:group-hover\:w-1\/2 {
+    width: 50%;
+  }
+
+  .group:hover .sm\:group-hover\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .group:hover .sm\:group-hover\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .group:hover .sm\:group-hover\:w-1\/4 {
+    width: 25%;
+  }
+
+  .group:hover .sm\:group-hover\:w-2\/4 {
+    width: 50%;
+  }
+
+  .group:hover .sm\:group-hover\:w-3\/4 {
+    width: 75%;
+  }
+
+  .group:hover .sm\:group-hover\:w-1\/5 {
+    width: 20%;
+  }
+
+  .group:hover .sm\:group-hover\:w-2\/5 {
+    width: 40%;
+  }
+
+  .group:hover .sm\:group-hover\:w-3\/5 {
+    width: 60%;
+  }
+
+  .group:hover .sm\:group-hover\:w-4\/5 {
+    width: 80%;
+  }
+
+  .group:hover .sm\:group-hover\:w-1\/6 {
+    width: 16.666667%;
+  }
+
+  .group:hover .sm\:group-hover\:w-2\/6 {
+    width: 33.333333%;
+  }
+
+  .group:hover .sm\:group-hover\:w-3\/6 {
+    width: 50%;
+  }
+
+  .group:hover .sm\:group-hover\:w-4\/6 {
+    width: 66.666667%;
+  }
+
+  .group:hover .sm\:group-hover\:w-5\/6 {
+    width: 83.333333%;
+  }
+
+  .group:hover .sm\:group-hover\:w-1\/12 {
+    width: 8.333333%;
+  }
+
+  .group:hover .sm\:group-hover\:w-2\/12 {
+    width: 16.666667%;
+  }
+
+  .group:hover .sm\:group-hover\:w-3\/12 {
+    width: 25%;
+  }
+
+  .group:hover .sm\:group-hover\:w-4\/12 {
+    width: 33.333333%;
+  }
+
+  .group:hover .sm\:group-hover\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .group:hover .sm\:group-hover\:w-6\/12 {
+    width: 50%;
+  }
+
+  .group:hover .sm\:group-hover\:w-7\/12 {
+    width: 58.333333%;
+  }
+
+  .group:hover .sm\:group-hover\:w-8\/12 {
+    width: 66.666667%;
+  }
+
+  .group:hover .sm\:group-hover\:w-9\/12 {
+    width: 75%;
+  }
+
+  .group:hover .sm\:group-hover\:w-10\/12 {
+    width: 83.333333%;
+  }
+
+  .group:hover .sm\:group-hover\:w-11\/12 {
+    width: 91.666667%;
+  }
+
+  .group:hover .sm\:group-hover\:w-full {
+    width: 100%;
+  }
+
+  .group:hover .sm\:group-hover\:w-screen {
     width: 100vw;
   }
 
@@ -35209,6 +35657,26 @@ video {
     opacity: 1;
   }
 
+  .group:hover .md\:group-hover\:opacity-0 {
+    opacity: 0;
+  }
+
+  .group:hover .md\:group-hover\:opacity-25 {
+    opacity: 0.25;
+  }
+
+  .group:hover .md\:group-hover\:opacity-50 {
+    opacity: 0.5;
+  }
+
+  .group:hover .md\:group-hover\:opacity-75 {
+    opacity: 0.75;
+  }
+
+  .group:hover .md\:group-hover\:opacity-100 {
+    opacity: 1;
+  }
+
   .md\:outline-none {
     outline: 0;
   }
@@ -39077,18 +39545,6 @@ video {
     text-decoration: none;
   }
 
-  .group:hover .md\:group-hover\:underline {
-    text-decoration: underline;
-  }
-
-  .group:hover .md\:group-hover\:line-through {
-    text-decoration: line-through;
-  }
-
-  .group:hover .md\:group-hover\:no-underline {
-    text-decoration: none;
-  }
-
   .md\:antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -39172,6 +39628,30 @@ video {
   }
 
   .md\:invisible {
+    visibility: hidden;
+  }
+
+  .md\:hover\:visible:hover {
+    visibility: visible;
+  }
+
+  .md\:hover\:invisible:hover {
+    visibility: hidden;
+  }
+
+  .md\:focus\:visible:focus {
+    visibility: visible;
+  }
+
+  .md\:focus\:invisible:focus {
+    visibility: hidden;
+  }
+
+  .group:hover .md\:group-hover\:visible {
+    visibility: visible;
+  }
+
+  .group:hover .md\:group-hover\:invisible {
     visibility: hidden;
   }
 
@@ -39403,6 +39883,198 @@ video {
   }
 
   .md\:w-screen {
+    width: 100vw;
+  }
+
+  .group:hover .md\:group-hover\:w-0 {
+    width: 0;
+  }
+
+  .group:hover .md\:group-hover\:w-1 {
+    width: 0.25rem;
+  }
+
+  .group:hover .md\:group-hover\:w-2 {
+    width: 0.5rem;
+  }
+
+  .group:hover .md\:group-hover\:w-3 {
+    width: 0.75rem;
+  }
+
+  .group:hover .md\:group-hover\:w-4 {
+    width: 1rem;
+  }
+
+  .group:hover .md\:group-hover\:w-5 {
+    width: 1.25rem;
+  }
+
+  .group:hover .md\:group-hover\:w-6 {
+    width: 1.5rem;
+  }
+
+  .group:hover .md\:group-hover\:w-8 {
+    width: 2rem;
+  }
+
+  .group:hover .md\:group-hover\:w-10 {
+    width: 2.5rem;
+  }
+
+  .group:hover .md\:group-hover\:w-12 {
+    width: 3rem;
+  }
+
+  .group:hover .md\:group-hover\:w-16 {
+    width: 4rem;
+  }
+
+  .group:hover .md\:group-hover\:w-20 {
+    width: 5rem;
+  }
+
+  .group:hover .md\:group-hover\:w-24 {
+    width: 6rem;
+  }
+
+  .group:hover .md\:group-hover\:w-32 {
+    width: 8rem;
+  }
+
+  .group:hover .md\:group-hover\:w-40 {
+    width: 10rem;
+  }
+
+  .group:hover .md\:group-hover\:w-48 {
+    width: 12rem;
+  }
+
+  .group:hover .md\:group-hover\:w-56 {
+    width: 14rem;
+  }
+
+  .group:hover .md\:group-hover\:w-64 {
+    width: 16rem;
+  }
+
+  .group:hover .md\:group-hover\:w-auto {
+    width: auto;
+  }
+
+  .group:hover .md\:group-hover\:w-px {
+    width: 1px;
+  }
+
+  .group:hover .md\:group-hover\:w-1\/2 {
+    width: 50%;
+  }
+
+  .group:hover .md\:group-hover\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .group:hover .md\:group-hover\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .group:hover .md\:group-hover\:w-1\/4 {
+    width: 25%;
+  }
+
+  .group:hover .md\:group-hover\:w-2\/4 {
+    width: 50%;
+  }
+
+  .group:hover .md\:group-hover\:w-3\/4 {
+    width: 75%;
+  }
+
+  .group:hover .md\:group-hover\:w-1\/5 {
+    width: 20%;
+  }
+
+  .group:hover .md\:group-hover\:w-2\/5 {
+    width: 40%;
+  }
+
+  .group:hover .md\:group-hover\:w-3\/5 {
+    width: 60%;
+  }
+
+  .group:hover .md\:group-hover\:w-4\/5 {
+    width: 80%;
+  }
+
+  .group:hover .md\:group-hover\:w-1\/6 {
+    width: 16.666667%;
+  }
+
+  .group:hover .md\:group-hover\:w-2\/6 {
+    width: 33.333333%;
+  }
+
+  .group:hover .md\:group-hover\:w-3\/6 {
+    width: 50%;
+  }
+
+  .group:hover .md\:group-hover\:w-4\/6 {
+    width: 66.666667%;
+  }
+
+  .group:hover .md\:group-hover\:w-5\/6 {
+    width: 83.333333%;
+  }
+
+  .group:hover .md\:group-hover\:w-1\/12 {
+    width: 8.333333%;
+  }
+
+  .group:hover .md\:group-hover\:w-2\/12 {
+    width: 16.666667%;
+  }
+
+  .group:hover .md\:group-hover\:w-3\/12 {
+    width: 25%;
+  }
+
+  .group:hover .md\:group-hover\:w-4\/12 {
+    width: 33.333333%;
+  }
+
+  .group:hover .md\:group-hover\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .group:hover .md\:group-hover\:w-6\/12 {
+    width: 50%;
+  }
+
+  .group:hover .md\:group-hover\:w-7\/12 {
+    width: 58.333333%;
+  }
+
+  .group:hover .md\:group-hover\:w-8\/12 {
+    width: 66.666667%;
+  }
+
+  .group:hover .md\:group-hover\:w-9\/12 {
+    width: 75%;
+  }
+
+  .group:hover .md\:group-hover\:w-10\/12 {
+    width: 83.333333%;
+  }
+
+  .group:hover .md\:group-hover\:w-11\/12 {
+    width: 91.666667%;
+  }
+
+  .group:hover .md\:group-hover\:w-full {
+    width: 100%;
+  }
+
+  .group:hover .md\:group-hover\:w-screen {
     width: 100vw;
   }
 
@@ -48960,6 +49632,26 @@ video {
     opacity: 1;
   }
 
+  .group:hover .lg\:group-hover\:opacity-0 {
+    opacity: 0;
+  }
+
+  .group:hover .lg\:group-hover\:opacity-25 {
+    opacity: 0.25;
+  }
+
+  .group:hover .lg\:group-hover\:opacity-50 {
+    opacity: 0.5;
+  }
+
+  .group:hover .lg\:group-hover\:opacity-75 {
+    opacity: 0.75;
+  }
+
+  .group:hover .lg\:group-hover\:opacity-100 {
+    opacity: 1;
+  }
+
   .lg\:outline-none {
     outline: 0;
   }
@@ -52828,18 +53520,6 @@ video {
     text-decoration: none;
   }
 
-  .group:hover .lg\:group-hover\:underline {
-    text-decoration: underline;
-  }
-
-  .group:hover .lg\:group-hover\:line-through {
-    text-decoration: line-through;
-  }
-
-  .group:hover .lg\:group-hover\:no-underline {
-    text-decoration: none;
-  }
-
   .lg\:antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -52923,6 +53603,30 @@ video {
   }
 
   .lg\:invisible {
+    visibility: hidden;
+  }
+
+  .lg\:hover\:visible:hover {
+    visibility: visible;
+  }
+
+  .lg\:hover\:invisible:hover {
+    visibility: hidden;
+  }
+
+  .lg\:focus\:visible:focus {
+    visibility: visible;
+  }
+
+  .lg\:focus\:invisible:focus {
+    visibility: hidden;
+  }
+
+  .group:hover .lg\:group-hover\:visible {
+    visibility: visible;
+  }
+
+  .group:hover .lg\:group-hover\:invisible {
     visibility: hidden;
   }
 
@@ -53154,6 +53858,198 @@ video {
   }
 
   .lg\:w-screen {
+    width: 100vw;
+  }
+
+  .group:hover .lg\:group-hover\:w-0 {
+    width: 0;
+  }
+
+  .group:hover .lg\:group-hover\:w-1 {
+    width: 0.25rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-2 {
+    width: 0.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-3 {
+    width: 0.75rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-4 {
+    width: 1rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-5 {
+    width: 1.25rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-6 {
+    width: 1.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-8 {
+    width: 2rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-10 {
+    width: 2.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-12 {
+    width: 3rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-16 {
+    width: 4rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-20 {
+    width: 5rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-24 {
+    width: 6rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-32 {
+    width: 8rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-40 {
+    width: 10rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-48 {
+    width: 12rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-56 {
+    width: 14rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-64 {
+    width: 16rem;
+  }
+
+  .group:hover .lg\:group-hover\:w-auto {
+    width: auto;
+  }
+
+  .group:hover .lg\:group-hover\:w-px {
+    width: 1px;
+  }
+
+  .group:hover .lg\:group-hover\:w-1\/2 {
+    width: 50%;
+  }
+
+  .group:hover .lg\:group-hover\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .group:hover .lg\:group-hover\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .group:hover .lg\:group-hover\:w-1\/4 {
+    width: 25%;
+  }
+
+  .group:hover .lg\:group-hover\:w-2\/4 {
+    width: 50%;
+  }
+
+  .group:hover .lg\:group-hover\:w-3\/4 {
+    width: 75%;
+  }
+
+  .group:hover .lg\:group-hover\:w-1\/5 {
+    width: 20%;
+  }
+
+  .group:hover .lg\:group-hover\:w-2\/5 {
+    width: 40%;
+  }
+
+  .group:hover .lg\:group-hover\:w-3\/5 {
+    width: 60%;
+  }
+
+  .group:hover .lg\:group-hover\:w-4\/5 {
+    width: 80%;
+  }
+
+  .group:hover .lg\:group-hover\:w-1\/6 {
+    width: 16.666667%;
+  }
+
+  .group:hover .lg\:group-hover\:w-2\/6 {
+    width: 33.333333%;
+  }
+
+  .group:hover .lg\:group-hover\:w-3\/6 {
+    width: 50%;
+  }
+
+  .group:hover .lg\:group-hover\:w-4\/6 {
+    width: 66.666667%;
+  }
+
+  .group:hover .lg\:group-hover\:w-5\/6 {
+    width: 83.333333%;
+  }
+
+  .group:hover .lg\:group-hover\:w-1\/12 {
+    width: 8.333333%;
+  }
+
+  .group:hover .lg\:group-hover\:w-2\/12 {
+    width: 16.666667%;
+  }
+
+  .group:hover .lg\:group-hover\:w-3\/12 {
+    width: 25%;
+  }
+
+  .group:hover .lg\:group-hover\:w-4\/12 {
+    width: 33.333333%;
+  }
+
+  .group:hover .lg\:group-hover\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .group:hover .lg\:group-hover\:w-6\/12 {
+    width: 50%;
+  }
+
+  .group:hover .lg\:group-hover\:w-7\/12 {
+    width: 58.333333%;
+  }
+
+  .group:hover .lg\:group-hover\:w-8\/12 {
+    width: 66.666667%;
+  }
+
+  .group:hover .lg\:group-hover\:w-9\/12 {
+    width: 75%;
+  }
+
+  .group:hover .lg\:group-hover\:w-10\/12 {
+    width: 83.333333%;
+  }
+
+  .group:hover .lg\:group-hover\:w-11\/12 {
+    width: 91.666667%;
+  }
+
+  .group:hover .lg\:group-hover\:w-full {
+    width: 100%;
+  }
+
+  .group:hover .lg\:group-hover\:w-screen {
     width: 100vw;
   }
 
@@ -62711,6 +63607,26 @@ video {
     opacity: 1;
   }
 
+  .group:hover .xl\:group-hover\:opacity-0 {
+    opacity: 0;
+  }
+
+  .group:hover .xl\:group-hover\:opacity-25 {
+    opacity: 0.25;
+  }
+
+  .group:hover .xl\:group-hover\:opacity-50 {
+    opacity: 0.5;
+  }
+
+  .group:hover .xl\:group-hover\:opacity-75 {
+    opacity: 0.75;
+  }
+
+  .group:hover .xl\:group-hover\:opacity-100 {
+    opacity: 1;
+  }
+
   .xl\:outline-none {
     outline: 0;
   }
@@ -66579,18 +67495,6 @@ video {
     text-decoration: none;
   }
 
-  .group:hover .xl\:group-hover\:underline {
-    text-decoration: underline;
-  }
-
-  .group:hover .xl\:group-hover\:line-through {
-    text-decoration: line-through;
-  }
-
-  .group:hover .xl\:group-hover\:no-underline {
-    text-decoration: none;
-  }
-
   .xl\:antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -66674,6 +67578,30 @@ video {
   }
 
   .xl\:invisible {
+    visibility: hidden;
+  }
+
+  .xl\:hover\:visible:hover {
+    visibility: visible;
+  }
+
+  .xl\:hover\:invisible:hover {
+    visibility: hidden;
+  }
+
+  .xl\:focus\:visible:focus {
+    visibility: visible;
+  }
+
+  .xl\:focus\:invisible:focus {
+    visibility: hidden;
+  }
+
+  .group:hover .xl\:group-hover\:visible {
+    visibility: visible;
+  }
+
+  .group:hover .xl\:group-hover\:invisible {
     visibility: hidden;
   }
 
@@ -66905,6 +67833,198 @@ video {
   }
 
   .xl\:w-screen {
+    width: 100vw;
+  }
+
+  .group:hover .xl\:group-hover\:w-0 {
+    width: 0;
+  }
+
+  .group:hover .xl\:group-hover\:w-1 {
+    width: 0.25rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-2 {
+    width: 0.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-3 {
+    width: 0.75rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-4 {
+    width: 1rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-5 {
+    width: 1.25rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-6 {
+    width: 1.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-8 {
+    width: 2rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-10 {
+    width: 2.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-12 {
+    width: 3rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-16 {
+    width: 4rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-20 {
+    width: 5rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-24 {
+    width: 6rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-32 {
+    width: 8rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-40 {
+    width: 10rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-48 {
+    width: 12rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-56 {
+    width: 14rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-64 {
+    width: 16rem;
+  }
+
+  .group:hover .xl\:group-hover\:w-auto {
+    width: auto;
+  }
+
+  .group:hover .xl\:group-hover\:w-px {
+    width: 1px;
+  }
+
+  .group:hover .xl\:group-hover\:w-1\/2 {
+    width: 50%;
+  }
+
+  .group:hover .xl\:group-hover\:w-1\/3 {
+    width: 33.333333%;
+  }
+
+  .group:hover .xl\:group-hover\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .group:hover .xl\:group-hover\:w-1\/4 {
+    width: 25%;
+  }
+
+  .group:hover .xl\:group-hover\:w-2\/4 {
+    width: 50%;
+  }
+
+  .group:hover .xl\:group-hover\:w-3\/4 {
+    width: 75%;
+  }
+
+  .group:hover .xl\:group-hover\:w-1\/5 {
+    width: 20%;
+  }
+
+  .group:hover .xl\:group-hover\:w-2\/5 {
+    width: 40%;
+  }
+
+  .group:hover .xl\:group-hover\:w-3\/5 {
+    width: 60%;
+  }
+
+  .group:hover .xl\:group-hover\:w-4\/5 {
+    width: 80%;
+  }
+
+  .group:hover .xl\:group-hover\:w-1\/6 {
+    width: 16.666667%;
+  }
+
+  .group:hover .xl\:group-hover\:w-2\/6 {
+    width: 33.333333%;
+  }
+
+  .group:hover .xl\:group-hover\:w-3\/6 {
+    width: 50%;
+  }
+
+  .group:hover .xl\:group-hover\:w-4\/6 {
+    width: 66.666667%;
+  }
+
+  .group:hover .xl\:group-hover\:w-5\/6 {
+    width: 83.333333%;
+  }
+
+  .group:hover .xl\:group-hover\:w-1\/12 {
+    width: 8.333333%;
+  }
+
+  .group:hover .xl\:group-hover\:w-2\/12 {
+    width: 16.666667%;
+  }
+
+  .group:hover .xl\:group-hover\:w-3\/12 {
+    width: 25%;
+  }
+
+  .group:hover .xl\:group-hover\:w-4\/12 {
+    width: 33.333333%;
+  }
+
+  .group:hover .xl\:group-hover\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .group:hover .xl\:group-hover\:w-6\/12 {
+    width: 50%;
+  }
+
+  .group:hover .xl\:group-hover\:w-7\/12 {
+    width: 58.333333%;
+  }
+
+  .group:hover .xl\:group-hover\:w-8\/12 {
+    width: 66.666667%;
+  }
+
+  .group:hover .xl\:group-hover\:w-9\/12 {
+    width: 75%;
+  }
+
+  .group:hover .xl\:group-hover\:w-10\/12 {
+    width: 83.333333%;
+  }
+
+  .group:hover .xl\:group-hover\:w-11\/12 {
+    width: 91.666667%;
+  }
+
+  .group:hover .xl\:group-hover\:w-full {
+    width: 100%;
+  }
+
+  .group:hover .xl\:group-hover\:w-screen {
     width: 100vw;
   }
 
