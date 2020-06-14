@@ -11576,6 +11576,18 @@ video {
   text-decoration: none;
 }
 
+.group:hover .group-hover\:underline {
+  text-decoration: underline;
+}
+
+.group:hover .group-hover\:line-through {
+  text-decoration: line-through;
+}
+
+.group:hover .group-hover\:no-underline {
+  text-decoration: none;
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25311,6 +25323,18 @@ video {
   }
 
   .sm\:focus\:no-underline:focus {
+    text-decoration: none;
+  }
+
+  .group:hover .sm\:group-hover\:underline {
+    text-decoration: underline;
+  }
+
+  .group:hover .sm\:group-hover\:line-through {
+    text-decoration: line-through;
+  }
+
+  .group:hover .sm\:group-hover\:no-underline {
     text-decoration: none;
   }
 
@@ -39053,6 +39077,18 @@ video {
     text-decoration: none;
   }
 
+  .group:hover .md\:group-hover\:underline {
+    text-decoration: underline;
+  }
+
+  .group:hover .md\:group-hover\:line-through {
+    text-decoration: line-through;
+  }
+
+  .group:hover .md\:group-hover\:no-underline {
+    text-decoration: none;
+  }
+
   .md\:antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -52792,6 +52828,18 @@ video {
     text-decoration: none;
   }
 
+  .group:hover .lg\:group-hover\:underline {
+    text-decoration: underline;
+  }
+
+  .group:hover .lg\:group-hover\:line-through {
+    text-decoration: line-through;
+  }
+
+  .group:hover .lg\:group-hover\:no-underline {
+    text-decoration: none;
+  }
+
   .lg\:antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -66528,6 +66576,18 @@ video {
   }
 
   .xl\:focus\:no-underline:focus {
+    text-decoration: none;
+  }
+
+  .group:hover .xl\:group-hover\:underline {
+    text-decoration: underline;
+  }
+
+  .group:hover .xl\:group-hover\:line-through {
+    text-decoration: line-through;
+  }
+
+  .group:hover .xl\:group-hover\:no-underline {
     text-decoration: none;
   }
 

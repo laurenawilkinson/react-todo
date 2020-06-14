@@ -38,6 +38,17 @@ class Todos extends Component {
     this.setState({ todos })
   }
 
+  toggleCompleteTodo = (id) => {
+    const todos = this.state.todos.map(todo => {
+      if (todo.id === id)
+        todo.completed = !todo.completed
+        
+      return todo;
+    })
+
+    this.setState({ todos })
+  }
+
   componentDidMount () {
     document.getElementById('todoInput').focus()
   }
@@ -49,10 +60,12 @@ class Todos extends Component {
           { this.state.todos.map(todo => {
             return (
               <TodoItem 
-                text={ todo.text } 
+                text={ todo.text }
+                completed={ todo.completed } 
                 id={ todo.id } 
                 key={ todo.id } 
-                deleteTodo={ this.deleteTodo } />
+                deleteTodo={ this.deleteTodo }
+                toggleCompleteTodo={ this.toggleCompleteTodo } />
             )
           }) }
         </ul>
