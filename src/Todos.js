@@ -33,8 +33,8 @@ class Todos extends Component {
     })
   }
 
-  deleteTodo = (e, id) => {
-    e.stopPropagation();
+  deleteTodo = (id, e = null) => {
+    if (e) e.stopPropagation();
 
     const todos = this.state.todos.filter(todo => todo.id !== id);
     this.setState({ todos })
@@ -79,12 +79,12 @@ class Todos extends Component {
         <form className="flex mb-5" onSubmit={ this.addTodo }>
           <input 
             id="todoInput"
-            className="rounded-l-lg bg-gray-200 flex-1 px-3"
+            className="rounded-l-lg font-medium bg-gray-200 flex-1 px-3 border-l border-t border-b border-transparent focus:outline-none focus:border-gray-400"
             placeholder="Add a task..."
             type="text" 
             value={ this.state.currentTodo } 
             onChange={ this.updateTodo } />
-          <button className="rounded-r-lg bg-teal-500 text-white font-semibold py-3 px-10">Add</button>
+          <button className="rounded-r-lg bg-teal-500 focus:bg-teal-400 focus:outline-none hover:bg-teal-400 text-white font-semibold py-3 px-10">Add</button>
         </form>
         { todoList }
       </div>
