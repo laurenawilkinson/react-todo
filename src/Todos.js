@@ -86,7 +86,7 @@ class Todos extends Component {
       (<p>Nothing left to-do!</p>)
 
     const addButtonClass = `
-      rounded-r-lg bg-teal-500 focus:outline-none text-white font-semibold py-3 px-10
+      rounded-r-lg bg-teal-500 flex items-center focus:outline-none text-white font-semibold py-3 px-3 md:px-10
       ${this.addDisabled() ? 'cursor-not-allowed' : 'hover:bg-teal-400 focus:bg-teal-400'}`
 
     const charLabelClass = `mb-5 ml-2 font-bold text-sm tracking-wide
@@ -110,7 +110,8 @@ class Todos extends Component {
           <button 
             className={ addButtonClass }
             disabled={ this.addDisabled() }>
-            Add
+            <i className="material-icons md:hidden">add</i>
+            <span className="hidden md:inline-block">Add</span>
           </button>
         </form>
         <p className={ charLabelClass }>
