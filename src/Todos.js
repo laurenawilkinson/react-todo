@@ -3,19 +3,21 @@ import TodoItem from './TodoItem'
 
 class Todos extends Component {
   state = {
-    todos: [
-      { id: 0, text: 'Start learning React', completed: true },
-      { id: 1, text: 'Add more to-dos', completed: false }
-    ],
+    todos: [],
     currentTodo: '',
     currentTodoId: 2,
     maxChars: 140
   }
 
-  addTodo = (e) => {
+  setTodos = (todos) => {
+    this.setState({ todos })
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }
+
+  addTodo = async (e) => {
     e.preventDefault();
     
-    this.setState(previousState => ({
+    await this.setState(previousState => ({
       todos: [ 
         ...previousState.todos, 
         { 
@@ -26,6 +28,9 @@ class Todos extends Component {
       currentTodo: '',
       currentTodoId: previousState.currentTodoId + 1
     }))
+
+    localStorage.setItem('todos', JSON.stringify(this.state.todos))
+
     document.getElementById('todoInput').focus();
   }
 
@@ -39,7 +44,8 @@ class Todos extends Component {
     if (e) e.stopPropagation();
 
     const todos = this.state.todos.filter(todo => todo.id !== id);
-    this.setState({ todos })
+
+    this.setTodos(todos);
   }
 
   toggleCompleteTodo = (id) => {
@@ -50,7 +56,7 @@ class Todos extends Component {
       return todo;
     })
 
-    this.setState({ todos })
+    this.setTodos(todos);
   }
 
   addDisabled = () => {
@@ -62,6 +68,11 @@ class Todos extends Component {
   }
 
   componentDidMount () {
+    let localTodos = JSON.parse(localStorage.getItem('todos')) || [];
+    
+    this.setState({
+      todos: localTodos
+    })
     document.getElementById('todoInput').focus()
   }
 
