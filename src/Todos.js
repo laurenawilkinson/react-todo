@@ -9,6 +9,15 @@ class Todos extends Component {
     maxChars: 140
   }
 
+  todaysDate = () => {
+    let date = new Date();
+    return date.toLocaleDateString('en-us');
+  }
+
+  todaysTodos = () => {
+    return this.state.todos.filter(x => x.date === this.todaysDate());
+  }
+
   setTodos = (todos) => {
     this.setState({ todos })
     localStorage.setItem('todos', JSON.stringify(todos))
@@ -22,7 +31,8 @@ class Todos extends Component {
         ...previousState.todos, 
         { 
           text: previousState.currentTodo,
-          id: previousState.currentTodoId
+          id: previousState.currentTodoId,
+          date: this.todaysDate()
         }
       ],
       currentTodo: '',
@@ -81,11 +91,11 @@ class Todos extends Component {
   }
 
   render () {
-    const { currentTodo, todos, maxChars } = this.state;
-    const todoList = todos.length > 0 ? 
+    const { currentTodo, maxChars } = this.state;
+    const todoList = this.todaysTodos().length > 0 ? 
       (
         <ul className="todo-list">
-          { todos.map(todo => {
+          { this.todaysTodos().map(todo => {
             return (
               <TodoItem 
                 text={ todo.text }
