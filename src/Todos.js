@@ -98,7 +98,7 @@ class Todos extends Component {
           }) }
         </ul>
       ) :
-      (<p>Nothing left to-do!</p>)
+      (<p className="text-center">Nothing left To-Do To-Day!</p>)
 
     const addButtonClass = `
       rounded-r-lg bg-indigo-500 flex items-center focus:outline-none text-white font-semibold py-3 px-3 md:px-10
@@ -116,7 +116,7 @@ class Todos extends Component {
         <form className="flex mb-2" onSubmit={ this.addTodo }>
           <input 
             id="todoInput"
-            className="rounded-l-lg font-medium bg-gray-700 flex-1 px-3 border-l border-t border-b border-transparent focus:outline-none focus:border-gray-400"
+            className="rounded-l-lg font-medium bg-gray-800 flex-1 px-3 border-l border-t border-b border-transparent focus:outline-none focus:border-gray-400"
             placeholder="Add a task..."
             type="text"
             maxLength={ maxChars }
