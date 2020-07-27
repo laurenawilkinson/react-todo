@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Button = (props) => {
-  const icon = <i className="material-icons text-xl mx-1">{ props.icon }</i>;
+  const icon = <i className={`material-icons text-xl ${!props.text ? 'mx-1' : props.iconRight ? 'ml-1' : 'mr-1'}`}>{ props.icon }</i>;
   const text = <span className={ props.textClass }>{ props.text }</span>;
 
-  const buttonClasses = `h-8 flex items-center font-medium bg-indigo-900 px-2 py-1 rounded-sm hover:bg-indigo-700 disabled:bg-transparent disabled:text-indigo-400 disabled:cursor-default ${props.className}`
+  const buttonClasses = `h-8 flex items-center font-medium px-2 py-1 rounded-sm hover:bg-indigo-800 disabled:bg-transparent disabled:text-indigo-400 disabled:cursor-default ${props.className}`
 
   return (
     <button 

@@ -21,7 +21,7 @@ class TodoItem extends Component {
     const { text, id, completed, deleteTodo, toggleCompleteTodo } = this.props;
     const transition = 'transition-all duration-150 ease-in-out';
     
-    const todoClass = `rounded-lg focus:outline-none border border-transparent mb-3 group flex ${completed ? 'bg-green-300 focus:border-green-400' : 'bg-gray-700 focus:border-gray-600' }`
+    const todoClass = `${transition} rounded-lg focus:outline-none border border-transparent mb-3 group flex ${completed ? 'bg-green-300 focus:border-green-400' : 'bg-gray-700 focus:border-gray-600' }`
 
     const tickMarkClass = `${transition} w-0 group-hover:w-12 group-focus:w-12 flex items-center justify-center rounded-l-lg ${completed ? 'w-12 bg-green-400' : 'bg-gray-600'}`
 

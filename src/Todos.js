@@ -129,12 +129,13 @@ class Todos extends Component {
 
     return (
       <div className="todos">
-        <form className="flex mb-2" onSubmit={ this.addTodo }>
+        <form className="flex mb-2" autoComplete="off" onSubmit={ this.addTodo }>
           <input 
             id="todoInput"
             className="rounded-l-lg font-medium bg-gray-800 flex-1 px-3 border-l border-t border-b border-transparent focus:outline-none focus:border-gray-400"
             placeholder="Add a task..."
             type="text"
+            autoComplete="off"
             maxLength={ maxChars }
             value={ currentTodo } 
             onChange={ this.updateTodo } />

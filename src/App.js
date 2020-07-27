@@ -39,12 +39,10 @@ export default class App extends Component {
               textClass="hidden md:inline-block"
               onClick={ () => this.timeTravelOneDay('backwards') }  />
             <Button
-              className="ml-3"
               disabled={ currentDateView === this.todaysDate() } 
               icon="home"
               onClick={ () => this.setState({ currentDateView: this.todaysDate() })} />
             <Button 
-              className="ml-3" 
               icon="keyboard_arrow_right" 
               text="Next"
               textClass="hidden md:inline-block"
