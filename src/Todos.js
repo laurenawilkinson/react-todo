@@ -5,7 +5,7 @@ class Todos extends Component {
   state = {
     todos: [],
     currentTodo: '',
-    currentTodoId: 2,
+    currentTodoId: 0,
     maxChars: 140
   }
 
@@ -69,10 +69,14 @@ class Todos extends Component {
 
   componentDidMount () {
     let localTodos = JSON.parse(localStorage.getItem('todos')) || [];
+    let localTodoId = localTodos.length > 0 ?
+       localTodos[localTodos.length - 1].id + 1 : 0;
     
     this.setState({
-      todos: localTodos
+      todos: localTodos,
+      currentTodoId: localTodoId
     })
+
     document.getElementById('todoInput').focus()
   }
 
@@ -97,22 +101,22 @@ class Todos extends Component {
       (<p>Nothing left to-do!</p>)
 
     const addButtonClass = `
-      rounded-r-lg bg-teal-500 flex items-center focus:outline-none text-white font-semibold py-3 px-3 md:px-10
-      ${this.addDisabled() ? 'cursor-not-allowed' : 'hover:bg-teal-400 focus:bg-teal-400'}`
+      rounded-r-lg bg-indigo-500 flex items-center focus:outline-none text-white font-semibold py-3 px-3 md:px-10
+      ${this.addDisabled() ? 'cursor-not-allowed' : 'hover:bg-indigo-400 focus:bg-indigo-400'}`
 
     const charLabelClass = `mb-5 ml-2 font-bold text-sm tracking-wide
       ${this.remainingChars() < maxChars / 5 
           ? 'text-red-600' 
           : this.remainingChars() < maxChars / 2 
             ? 'text-orange-500' 
-            : 'text-gray-600'}`
+            : 'text-gray-400'}`
 
     return (
       <div className="todos">
         <form className="flex mb-2" onSubmit={ this.addTodo }>
           <input 
             id="todoInput"
-            className="rounded-l-lg font-medium bg-gray-200 flex-1 px-3 border-l border-t border-b border-transparent focus:outline-none focus:border-gray-400"
+            className="rounded-l-lg font-medium bg-gray-700 flex-1 px-3 border-l border-t border-b border-transparent focus:outline-none focus:border-gray-400"
             placeholder="Add a task..."
             type="text"
             maxLength={ maxChars }
