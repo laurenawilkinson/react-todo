@@ -8,13 +8,17 @@ export default class App extends Component {
     currentDateView: new Date().toLocaleDateString('en-us')
   }
 
+  todaysDate = () => {
+    return new Date().toLocaleDateString('en-us');
+  }
+
   currentDateViewObject = () => {
     return new Date (this.state.currentDateView);
   }
 
   timeTravelOneDay = (travel = 'forwards') => {
     const date = this.currentDateViewObject();
-    const travelTime = travel == 'forwards' ? 1 : -1; 
+    const travelTime = travel === 'forwards' ? 1 : -1; 
 
     date.setDate(date.getDate() + travelTime);
 
@@ -35,9 +39,10 @@ export default class App extends Component {
               textClass="hidden md:inline-block"
               onClick={ () => this.timeTravelOneDay('backwards') }  />
             <Button
-              className="ml-3" 
+              className="ml-3"
+              disabled={ currentDateView === this.todaysDate() } 
               icon="home"
-              onClick={ () => this.setState({ currentDateView: new Date().toLocaleDateString('en-us') })} />
+              onClick={ () => this.setState({ currentDateView: this.todaysDate() })} />
             <Button 
               className="ml-3" 
               icon="keyboard_arrow_right" 

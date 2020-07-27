@@ -4,10 +4,14 @@ const Button = (props) => {
   const icon = <i className="material-icons text-xl mx-1">{ props.icon }</i>;
   const text = <span className={ props.textClass }>{ props.text }</span>;
 
-  const buttonClasses = `h-8 flex items-center font-medium bg-indigo-900 px-2 py-1 rounded-sm hover:bg-indigo-700 ${props.className}`
+  const buttonClasses = `h-8 flex items-center font-medium bg-indigo-900 px-2 py-1 rounded-sm hover:bg-indigo-700 disabled:bg-transparent disabled:text-indigo-400 disabled:cursor-default ${props.className}`
 
   return (
-    <button className={ buttonClasses } type="button" onClick={ props.onClick }>
+    <button 
+      className={ buttonClasses } 
+      type="button" 
+      disabled={ props.disabled }
+      onClick={ props.onClick }>
       { !props.iconRight && props.icon ? icon : '' }
       { props.text ? text : '' }
       { props.iconRight && props.icon ? icon : '' }
@@ -21,6 +25,7 @@ Button.defaultProps = {
   textClass: '',
   iconRight: false,
   className: '',
+  disabled: false,
   onClick: () => {}
 }
 
