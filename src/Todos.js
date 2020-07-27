@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import TodoItem from './TodoItem'
 
 class Todos extends Component {
+  static defaultProps = {
+    currentDateView: new Date().toLocaleDateString('en-us')
+  }
+
   state = {
     todos: [],
     currentTodo: '',
@@ -9,13 +13,8 @@ class Todos extends Component {
     maxChars: 140
   }
 
-  todaysDate = () => {
-    let date = new Date();
-    return date.toLocaleDateString('en-us');
-  }
-
-  todaysTodos = () => {
-    return this.state.todos.filter(x => x.date === this.todaysDate());
+  displayedTodos = () => {
+    return this.state.todos.filter(x => x.date === this.props.currentDateView);
   }
 
   setTodos = (todos) => {
@@ -32,7 +31,7 @@ class Todos extends Component {
         { 
           text: previousState.currentTodo,
           id: previousState.currentTodoId,
-          date: this.todaysDate()
+          date: this.props.currentDateView
         }
       ],
       currentTodo: '',
@@ -92,10 +91,10 @@ class Todos extends Component {
 
   render () {
     const { currentTodo, maxChars } = this.state;
-    const todoList = this.todaysTodos().length > 0 ? 
+    const todoList = this.displayedTodos().length > 0 ? 
       (
         <ul className="todo-list">
-          { this.todaysTodos().map(todo => {
+          { this.displayedTodos().map(todo => {
             return (
               <TodoItem 
                 text={ todo.text }
