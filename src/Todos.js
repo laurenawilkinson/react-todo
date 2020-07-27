@@ -2,11 +2,19 @@ import React, { Component } from 'react';
 import TodoItem from './TodoItem'
 
 class Todos extends Component {
+  static defaultProps = {
+    currentDateView: new Date().toLocaleDateString('en-us')
+  }
+
   state = {
     todos: [],
     currentTodo: '',
     currentTodoId: 0,
     maxChars: 140
+  }
+
+  displayedTodos = () => {
+    return this.state.todos.filter(x => x.date === this.props.currentDateView);
   }
 
   setTodos = (todos) => {
@@ -22,7 +30,8 @@ class Todos extends Component {
         ...previousState.todos, 
         { 
           text: previousState.currentTodo,
-          id: previousState.currentTodoId
+          id: previousState.currentTodoId,
+          date: this.props.currentDateView
         }
       ],
       currentTodo: '',
@@ -81,30 +90,37 @@ class Todos extends Component {
   }
 
   render () {
-    const { currentTodo, todos, maxChars } = this.state;
-    const todoList = todos.length > 0 ? 
+    const { currentTodo, maxChars } = this.state;
+    const completedTodos = this.displayedTodos().filter(x => x.completed);
+
+    const todoList = this.displayedTodos().length > 0 ? 
       (
-        <ul className="todo-list">
-          { todos.map(todo => {
-            return (
-              <TodoItem 
-                text={ todo.text }
-                completed={ todo.completed } 
-                id={ todo.id } 
-                key={ todo.id } 
-                deleteTodo={ this.deleteTodo }
-                toggleCompleteTodo={ this.toggleCompleteTodo } />
-            )
-          }) }
-        </ul>
+        <div>
+          <div className="mb-5 text-right">
+            <span className={`font-medium ${completedTodos.length === this.displayedTodos().length ? 'text-green-200' : 'text-indigo-200'}`}>{ completedTodos.length }/{ this.displayedTodos().length } completed</span>
+          </div>
+          <ul className="todo-list">
+            { this.displayedTodos().map(todo => {
+              return (
+                <TodoItem 
+                  text={ todo.text }
+                  completed={ todo.completed } 
+                  id={ todo.id } 
+                  key={ todo.id } 
+                  deleteTodo={ this.deleteTodo }
+                  toggleCompleteTodo={ this.toggleCompleteTodo } />
+              )
+            }) }
+          </ul>
+        </div>
       ) :
-      (<p className="text-center">Nothing left To-Do To-Day!</p>)
+      (<p className="text-center mt-5">No tasks scheduled for this day.</p>)
 
     const addButtonClass = `
       rounded-r-lg bg-indigo-500 flex items-center focus:outline-none text-white font-semibold py-3 px-3 md:px-10
       ${this.addDisabled() ? 'cursor-not-allowed' : 'hover:bg-indigo-400 focus:bg-indigo-400'}`
 
-    const charLabelClass = `mb-5 ml-2 font-bold text-sm tracking-wide
+    const charLabelClass = `ml-2 font-bold text-sm tracking-wide
       ${this.remainingChars() < maxChars / 5 
           ? 'text-red-600' 
           : this.remainingChars() < maxChars / 2 
