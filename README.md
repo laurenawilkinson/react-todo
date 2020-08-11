@@ -8,7 +8,7 @@ A daily to-do list web application developed using React and styled using Tailwi
 - To-do's saved to the browser using LocalStorage
 - Keyboard accessible, keyboard shortcuts
 - Designed to be responsive to work across devices
-- Dark mode
+- Mass migrate or remove unfinished to-do's from previous days
 
 ## Running Locally
 
