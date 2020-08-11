@@ -1,6 +1,8 @@
-# [To-Do To-Day](https://to-do-to-day.netlify.app)
+# To-Do To-Day
 
 A daily to-do list web application developed using React and styled using TailwindCSS.
+
+## [Demo](https://to-do-to-day.netlify.app) 💻
 
 ## Features
 - To-do's saved to the browser using LocalStorage
@@ -8,21 +10,13 @@ A daily to-do list web application developed using React and styled using Tailwi
 - Designed to be responsive to work across devices
 - Dark mode
 
-## To run locally
+## Running Locally
 
-In the project directory, you can run:
+**Project setup** <br />
+`npm install`
 
-### `npm start`
+**Compiles and hot-reloads for development** <br />
+`npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.
+**Compiles and minifies for production** <br />
+`npm run build`
