@@ -3,22 +3,76 @@ import TodoItem from './TodoItem'
 
 class Todos extends Component {
   static defaultProps = {
-    currentDateView: new Date().toLocaleDateString('en-us')
+    currentDateView: new Date()
   }
 
-  state = {
-    todos: [],
-    currentTodo: '',
-    currentTodoId: 0,
-    maxChars: 140
+  constructor (props) {
+    super(props);
+
+    let localTodos = JSON.parse(localStorage.getItem('todos')) || [];
+    let localTodoId = localTodos.length > 0 ?
+       localTodos[localTodos.length - 1].id + 1 : 0;
+
+    this.state = {
+      todos: localTodos,
+      currentTodo: '',
+      currentTodoId: localTodoId,
+      maxChars: 140
+    }
+  }
+
+  getMigratableTodos = () => {
+    return this.state.todos.filter(todo => {
+      // convert date strings into objects 
+      // (some strings may be US format, though the standard now is yyyy/mm/dd)
+      const todoDate = this.props.formatDate(new Date(todo.date));
+      const currentDate = this.props.formatDate(new Date(this.props.todaysDate));
+
+      return todoDate < currentDate && !todo.completed;
+    })
+  }
+
+  removeMigratableTodos = () => {
+    const idsToRemove = this.getMigratableTodos().map(x => x.id);
+    const todos = this.state.todos.filter(x => !idsToRemove.includes(x.id))
+
+    this.setTodos(todos);
+    this.props.updateMigratableTodos([]);
+  }
+
+  migrateTodos = () => {
+    // migrate older todos
+    let newTodolist = this.state.todos.map(t => {
+      // copy to avoid mutation
+      let todo = JSON.parse(JSON.stringify(t));
+
+      const todoDate = this.props.formatDate(new Date(todo.date));
+      const currentDate = this.props.formatDate(new Date(this.props.currentDateView));
+      
+      if (todoDate < currentDate && !todo.completed) {
+        todo.originalDate = todoDate;
+        todo.date = currentDate;
+      }
+
+      return todo;
+    })
+
+    this.setTodos(newTodolist);
+    this.props.updateMigratableTodos([]);
   }
 
   displayedTodos = () => {
-    return this.state.todos.filter(x => x.date === this.props.currentDateView);
+    const criteria = (todo) => {
+      const todoDate = this.props.formatDate(new Date(todo.date));
+      const currentDate = this.props.formatDate(new Date(this.props.currentDateView));
+
+      return todoDate === currentDate;
+    }
+    return this.state.todos.filter(criteria);
   }
 
-  setTodos = (todos) => {
-    this.setState({ todos })
+  setTodos = (todos, stateUpdates = {}) => {
+    this.setState({ todos, ...stateUpdates })
     localStorage.setItem('todos', JSON.stringify(todos))
   }
 
@@ -31,7 +85,7 @@ class Todos extends Component {
         { 
           text: previousState.currentTodo,
           id: previousState.currentTodoId,
-          date: this.props.currentDateView
+          date: this.props.formatDate(this.props.currentDateView)
         }
       ],
       currentTodo: '',
@@ -43,7 +97,7 @@ class Todos extends Component {
     document.getElementById('todoInput').focus();
   }
 
-  updateTodo = (e) => {
+  updateCurrentTodoText = (e) => {
     this.setState({
       currentTodo: e.target.value
     })
@@ -77,15 +131,9 @@ class Todos extends Component {
   }
 
   componentDidMount () {
-    let localTodos = JSON.parse(localStorage.getItem('todos')) || [];
-    let localTodoId = localTodos.length > 0 ?
-       localTodos[localTodos.length - 1].id + 1 : 0;
+    // check for migratable todos
+    this.props.updateMigratableTodos(this.getMigratableTodos());
     
-    this.setState({
-      todos: localTodos,
-      currentTodoId: localTodoId
-    })
-
     document.getElementById('todoInput').focus()
   }
 
@@ -99,12 +147,13 @@ class Todos extends Component {
           <div className="mb-5 text-right">
             <span className={`font-medium ${completedTodos.length === this.displayedTodos().length ? 'text-green-200' : 'text-indigo-200'}`}>{ completedTodos.length }/{ this.displayedTodos().length } completed</span>
           </div>
-          <ul className="todo-list">
+          <ul className="todo-list select-none">
             { this.displayedTodos().map(todo => {
               return (
                 <TodoItem 
                   text={ todo.text }
-                  completed={ todo.completed } 
+                  completed={ todo.completed }
+                  originalDate={ todo.originalDate }
                   id={ todo.id } 
                   key={ todo.id } 
                   deleteTodo={ this.deleteTodo }
@@ -138,7 +187,7 @@ class Todos extends Component {
             autoComplete="off"
             maxLength={ maxChars }
             value={ currentTodo } 
-            onChange={ this.updateTodo } />
+            onChange={ this.updateCurrentTodoText } />
           <button 
             className={ addButtonClass }
             disabled={ this.addDisabled() }>
